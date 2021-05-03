@@ -42,7 +42,7 @@ public class Main {
 
         Campaign campaign=new Campaign();
         campaign.setId(1);
-        campaign.setCampaignName("2 al 3 öde kampanyası");
+        campaign.setCampaignName("3 al 2 öde ");
         campaign.setDiscount(10.20);
 
         Campaign[] campaigns= {campaign};
