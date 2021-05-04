@@ -1,6 +1,8 @@
 package com.company.Interfaces;
 
+import com.company.Entities.Customer;
+
 public interface AuthorizeService {
 
-    boolean verify(String nationaIdentity,String fullName,String birthdayDate);
+    boolean verify(Customer customer);
 }

@@ -1,5 +1,6 @@
 package com.company.Managers;
 
+import com.company.Entities.Customer;
 import com.company.Interfaces.AuthorizeService;
 
 public class Authorize implements AuthorizeService {
@@ -9,8 +10,8 @@ public class Authorize implements AuthorizeService {
     private String birthdayDate=("05.05.1999");
 
     @Override
-    public boolean verify(String nationalIdentity, String fullName, String birthdayDate) {
-        if((this.nationalIdentity.equals(nationalIdentity))&&(this.fullName.equals(fullName))&&(this.birthdayDate.equals(birthdayDate))) {
+    public boolean verify(Customer customer) {
+        if((this.nationalIdentity.equals(customer.getNationalIdentity()))&&(this.fullName.equals(customer.getFullName()))&&(this.birthdayDate.equals(customer.getBirthdayDate()))) {
             return true;
         }
         else {

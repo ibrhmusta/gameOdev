@@ -13,11 +13,12 @@ public class CustomerManager implements CustomerService {
 
     @Override
     public void login(Customer customer) {
-        if (authorizeService.verify(customer.getNationalIdentity(),customer.getFullName(),customer.getBirthdayDate()))
+        if (authorizeService.verify(customer))
         {
             System.out.println("Müşteri Girişi Başarılı!");
 
-        } else {
+        }
+        else {
             System.out.println("Kullanıcı girişi başarısız!");
         }
     }

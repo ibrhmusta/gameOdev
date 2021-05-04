@@ -9,7 +9,7 @@ import com.company.Interfaces.SaleService;
 public class SaleManager implements SaleService {
     @Override
     public void add(Sale sale, Game game, Customer customer, Campaign campaign) {
-        System.out.println(sale.getId()+"Numaralı işlem: "+game.getName()+" isimli oyun "+customer.getFullName()+ " kullanıcısına "+campaign.getDiscount()+" indirim ile satıldı.");
+        System.out.println(sale.getId()+"Numaralı işlem: "+game.getName()+" isimli oyun "+customer.getFullName()+ " kullanıcısına "+campaign.getCampaignName()+" kampanyası ile satıldı.");
     }
 
     @Override

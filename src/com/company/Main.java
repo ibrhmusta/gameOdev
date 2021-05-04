@@ -16,7 +16,6 @@ public class Main {
         customer.setBirthdayDate("05.05.1999");
 
 
-
         CustomerManager customerManager=new CustomerManager(new Authorize());
         customerManager.login(customer);
         customerManager.update(customer);
@@ -42,7 +41,7 @@ public class Main {
 
         Campaign campaign=new Campaign();
         campaign.setId(1);
-        campaign.setCampaignName("3 al 2 öde ");
+        campaign.setCampaignName("3 al 2 öde");
         campaign.setDiscount(10.20);
 
         Campaign[] campaigns= {campaign};
@@ -59,7 +58,7 @@ public class Main {
         Sale[] sales= {sale};
 
         SaleManager saleManager=new SaleManager();
-
+        saleManager.add(sale,game,customer,campaign);
         saleManager.getAll(sales);
     }
 }
